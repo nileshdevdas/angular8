@@ -25,13 +25,14 @@ import { HollywoodComponent } from './hollywood/hollywood.component';
 import { BollywoodComponent } from './bollywood/bollywood.component';
 import { RegionalComponent } from './regional/regional.component';
 import { DocumentaryComponent } from './documentary/documentary.component';
+import { AuthGuard } from './auth.guard';
 /* routing rules */
 const routes: Route[] = [
   {
     path: '', component: HomepageComponent
   },
   {
-    path: 'movies', component: MoviespageComponent,
+    path: 'movies', component: MoviespageComponent, canActivate: [AuthGuard],
     children: [
       { path: '', component: BollywoodComponent },
       { path: 'bollywood', component: BollywoodComponent },
@@ -41,8 +42,8 @@ const routes: Route[] = [
       { path: '**', component: OopspageComponent }
     ]
   },
-  { path: 'events', component: EventspageComponent },
-  { path: 'tv', component: TelevisionpageComponent },
+  { path: 'events', component: EventspageComponent, canActivate: [AuthGuard] },
+  { path: 'tv', component: TelevisionpageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginpageComponent },
   { path: 'signup', component: SinguppageComponent },
   { path: '**', component: OopspageComponent }
