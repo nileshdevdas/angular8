@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { createOfflineCompileUrlResolver } from '@angular/compiler';
 import { Subject } from 'rxjs';
-import { runInThisContext } from 'vm';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private subject: Subject = new Subject();
+  private subject: Subject<any> = new Subject();
 
   constructor() { }
   isLoggedIn() {

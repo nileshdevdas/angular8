@@ -1,6 +1,14 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">{{title}}</div>
-    <div class="panel-body"><button class="btn btn-success" (click)="increment($event)">ClickMe</button> {{count}}</div>
-    <div class="panel-footer">Footer</div>
-    
+  <div class="panel-heading">{{title}}</div>
+  <div class="panel-body">
+    <a [routerLink]="['bollywood']" routerLinkActive="router-link-active">BollyWood</a>
+    |
+    <a [routerLink]="['hollywood']" routerLinkActive="router-link-active">HollyWood</a>
+    |
+    <a [routerLink]="['regional']" routerLinkActive="router-link-active">Regional</a>
+    |
+    <a [routerLink]="['documentary']" routerLinkActive="router-link-active">Documentary</a>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="panel-footer">Footer</div>
 </div>

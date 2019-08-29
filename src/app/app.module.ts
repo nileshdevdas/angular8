@@ -10,7 +10,7 @@ import { InfoComponent } from './info/info.component';
 import { MovielistComponent } from './movielist/movielist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CconvertorPipe } from './cconvertor.pipe';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MoviespageComponent } from './moviespage/moviespage.component';
 import { TelevisionpageComponent } from './televisionpage/televisionpage.component';
@@ -20,10 +20,26 @@ import { SinguppageComponent } from './singuppage/singuppage.component';
 import { OopspageComponent } from './oopspage/oopspage.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { Info1Component } from './info1/info1.component';
+import { HollywoodComponent } from './hollywood/hollywood.component';
+import { BollywoodComponent } from './bollywood/bollywood.component';
+import { RegionalComponent } from './regional/regional.component';
+import { DocumentaryComponent } from './documentary/documentary.component';
 /* routing rules */
-const routes = [
-  { path: '', component: HomepageComponent },
-  { path: 'movies', component: MoviespageComponent },
+const routes: Route[] = [
+  {
+    path: '', component: HomepageComponent
+  },
+  {
+    path: 'movies', component: MoviespageComponent,
+    children: [
+      { path: 'bollywood', component: BollywoodComponent },
+      { path: 'hollywood', component: HollywoodComponent },
+      { path: 'regional', component: RegionalComponent },
+      { path: 'documentary', component: DocumentaryComponent },
+      { path: '**', component: OopspageComponent }
+    ]
+  },
   { path: 'events', component: EventspageComponent },
   { path: 'tv', component: TelevisionpageComponent },
   { path: 'login', component: LoginpageComponent },
@@ -48,7 +64,12 @@ const routes = [
     LoginpageComponent,
     SinguppageComponent,
     OopspageComponent,
-    LoginComponent
+    LoginComponent,
+    Info1Component,
+    HollywoodComponent,
+    BollywoodComponent,
+    RegionalComponent,
+    DocumentaryComponent
   ],
 
   imports: [
