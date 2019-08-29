@@ -1,0 +1,832 @@
+Angular : 8 
+Visual Studio Code: 
+Node: -- NPM (Node Package Manager) node 10 ver 14 or higher (10 16)
+Browser  - Chrome , Internet Explorer  
+Internet Connection : 
+	|----- 
+
+	npm install = it tries to downnload 
+
+
+Pre-requisites :- 
+	|-  html 
+	|-- css 
+	|-- http 
+	|-- js 
+	|-- Browser tools 
+	|-- Json 
+	|-- Restfull Api / Services
+
+
+What Are we learning :- 
+Angular 8 :- 
+
+
+182.73.59.123:22001
+Administrator
+angular4all
+
+--------------------------------------------------------
+npm -v 
+node package manager 
+a) Tools  // global 
+		angular-cl 
+
+		 npm install -g  // installing a global  instance of the given npm package 
+		 # to install a global instance of the angular-cli 
+		 npm install -g @angular-cli@version
+
+		 Scaffolding => 
+
+b) Libraries 
+		 ARe dependant libaries or dependencies which you can 
+		 	install 
+		 	c:\test>  npm install abc 
+
+
+
+npm : Node Package Manager 
+
+i use npm for 2 basic reasons 
+a) to install tools 
+b) to install libraries 
+
+normally the tools should be a global install
+ 	--> npm install -g  // is known as globarl 
+ 		npm install -g <module>@<version> 
+
+and the libraries should be a local install 
+
+--------------------------------------------------------------------------------
+Angular uses  TypeScript 
+When you develop angular your write --> Typescript 
+
+When one compiles a typescript --> the output is javascript 
+
+-------------------------------------------------------------------------------
+Server side    v/s    Client Side 
+
+ 				MVC 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~
+
+https://github.com/nileshdevdas/angularts.git
+
+
+Why  to export a class 
+If you dont export a class you cannot use it in some other place 
+
+
+how to export a class 
+
+export class ClasName {}
+
+for the a normal export 
+import {} from  'MyApp'
+
+But this means its not the default class its means this file may have more than one class 
+
+export defualt class className{} // tjis means this  the default clas in the file 
+
+
+
+
+export class MyApp {} // exports a class without defualt 
+
+to use this class in any other location 
+
+import MyApp from './nileshapp'
+
+
+
+i will create a project :-
+i will add a lot of libraries to my project 
+ i also create  package configurat file 
+i will checkin the code in the git/scm 
+	will check in the libraires also : 
+
+
+
+Developer 2 pulls my roject (Checkout)
+How will get get the libraries 
+How will he come to know which libraries 
+how will he synch up with the same libraries 
+i can install from the pacakge config --->  	
+
+
+
+
+
+
+How does angular work :- 
+ng serve -o  -> 
+it start a internal http server ->
+
+Compiles all your files and converts them to js 
+the main file that is loaded in the browser is the 
+
+index.html--> 
+	---> main.js --> 
+			---> app.module
+					---> app.component 
+							|----comp1
+									|--subcomp1-1
+									|--subcomp1-2
+							|----comp2 
+									|--subcomp2-1
+
+
+|------angular.json  (config) / what you compinle / location / css/js/ico/src/p
+								testing config / production config 
+
+running for production 
+	// the js is minified 
+	// the map is removed (not generated)
+	ng build --prod
+running for dev 
+	// the js is minified 
+	// the map is generated 
+	// the web pack allows debugging 
+	ng build (with out prod)
+	ng serve (for test)
+
+running for testing 
+	/// karma jasmine 
+		test runner 
+		unit runners 
+		jasmine framework 
+		ng test 
+
+
+|--------angular.json 
+				|----
+|--------package.json 
+		  		|--- all libraries desc 
+|---------node_modules
+				|---- libs 
+|-------- tsconfig 
+|--------- dist 
+|--------- e2e is a folder where you will get the complete selenium end test 			cases 
+
+SPEC ---> 
+	test file 
+	A Spec file a test case for each of the component or service module 
+	or pipe or ......... 
+
+
+
+
+src 
+ |------=	
+
+ main.ts --> 
+ 			AppModule
+ 				|---- AppComponent 
+ 							|---html
+ 							|---css 
+ 							|---ts 
+
+
+
+
+Angular is a single page application ...... 
+
+you will not refresh 
+when you say back its not th eborwser :- 
+
+
+myapp
+ |---.gitignore
+ |---.editorconfig 
+ |----browserlist 
+ |---angular.json 
+ |---pakcage.json 
+ |---node_modules 
+ |---dist 
+ |---e2e
+ |---src 
+ 	  |---app
+ 	  		app.module.ts 
+ 	  		app.component.ts
+ 	  		app.component.html
+ 	  		app.component.css 
+ 	  |-main.ts
+ 	  |-assets 
+ 	  |-index.html  
+ |---tsconfig.json
+ |---tsconfig-spec.json 
+
+
+
+
+What is a component ? 
+	a Class  writeent in type script 
+
+	@Component({
+
+	})
+	class HelloWorlComponent implements NgInit  {
+
+	}
+	but a component is not a component unless and until it is decorated 
+	with a decorate @Component 
+	a component class can also implement a lifecycle interface 
+
+what does a component comprise of  ?
+	
+
+	@Component({
+		selector : "hello"
+	})
+	class HelloWorlComponent implements NgInit  {
+
+	}
+	A component is made up of 3 major things 
+	a)   the component class -> Ts file 
+	b)   the  style sheet  -> css file 
+	c)   the template --> theml 
+
+Do i need to register a component anywhere  ?
+	Yes each component is registered in the app.module.ts : the 
+	respective module file in which the component exist 
+
+
+Can i remove a componet like i add one using cli ? 
+		no 
+which files are affected when a component added ? 
+	app.module.ts 
+	4 files are create 
+	css
+	ts
+	html
+	spec.ts
+
+does component get placed on automatically ? 
+		no i will have to place 
+how do i  control the component behaviour  ? 
+
+how do i control the components state  ?
+
+How to place a component on a page  ?
+
+
+
+
+
+
+Step 1 :  ng  g  c   <componentName> 
+creates a component 
+
+this modifies the app.module.ts  and add the component in the declartion 
+	section 
+
+
+create  component.html 
+		component.css 
+		component.ts 
+		component.spec.ts 
+
+
+To add or place  compoent on a page you should find which parent compnent 
+will render this component > 
+
+becuase you already have a parent component :- (app.component)
+
+you will go in the app.component.html // the parent component html 
+and place a tag which is the selector of you coponent 
+<app-hello></app-hello>
+
+
+
+I need the following components 
+
+Root->
+a) navbar 
+b) maindesk 
+	|---info 
+	|---movieslist
+c) footer 
+
+
+
+
+
+What is a Service ?
+	service is a class 
+	but a service become a service when its decorated wiht 
+	@Injectible 
+
+	Genrally services are to be provided in app.module.ts 
+	however as per angular 6 and above we dont need to provide services 
+	in app.module.ts  and just have to write it in the 
+	@Injectible({
+		providedIn : "moduleName"
+	})
+
+
+How to write a service ? 
+		ng g s  serviceName
+
+Can a service be placed on the page ? 
+		no services are backend components ther can used inside the 
+		component to fetch data 
+
+does service have a lifecycle ? 
+		yes services are singleton 
+		service are instantiated only and only once 
+		services are not recreated even if you call it multiple times 	
+	
+
+does service  need to be instantiated ? 
+		not service is inject directly in components using 
+		dependency injection 
+
+		DI can only be done in the constructors 
+do i need to register a service  ? 
+	 as per v5 yes  as per v6 and above they self registrable 
+
+how to access a service ? 
+			constructor injection 
+
+
+how to call a service method  ?
+		injected var.methodName 
+can service use other services ? 
+		yes 
+can service have state  ? 	
+	 absolutely but is shared acrosss all the service consumer 
+
+can  service be instantiated ? 
+		no you never instantiate a service 
+
+
+
+
+
+
+To make a http call 
+
+you will first need to import HttpClientModule 
+then you will need to inject the HttpClient in your service 
+
+then using this client you will make a call to the service using .get method 
+the .get method returns a observable 
+
+the observable is reutrned ot he component 
+
+now its the job of the component to subscribe and when it gets the result 
+change the object  variable when object variable changes so does the view changes 
+
+
+
+
+
+What is a pipe 
+	it is a class 
+	decorated with @Pipe
+
+	accepts a input returns output 
+
+
+BehaviourSubject 
+ReplaySubject 
+AsyncSubject 
+
+
+
+
+
+
+What is routes : 
+
+	routes is configurtion and not a class 
+	what path mean which component 
+
+in angular again to remind router is  module 
+i will have to import a module RouterModule 
+
+app.module.ts
+
+
+
+
+
+
+1. you must understand that a route is rule to decide based on the url which component needs to be show when what url is clicked 
+this section of code is known as the routerconfig 
+
+const routes = [
+	{ path : '' , component : SomeComponent }, 
+	{ path : '**' , component : OopsComponent }
+]
+
+// the above is the configuration to two root routes ..... 
+
+
+2. The router configuration must be passed to the RouterModule so that 
+the router module understand when clicked what is to be pushed 
+
+import {RouterModule} from '@angular/router'
+
+import : [
+	RouterModule.forRoot(routes)
+]
+
+3. But pushed where ?  i need a place hodler to place the component/pages 
+and display in a specific location .... this section is knows as router-outlet 
+Somewhere you must decide a compionet to act as layout component which allows me to decide where is the router-outed to be placed 
+in our case this was the main desk <router-outlet></router-outlet>
+
+this will start working if you type the url directly but ???? 
+
+4. the last part is that the links cannot be href a href is browser native and browser native will work with refresh hence routerLink 
+[routerLink] =""
+
+[] == one way from page to component  
+[()] == from page to component & component to page 
+{{}} == expression to display the contnet  //component to page 
+()  == event 
+*  == directive 
+|   == pipe 
+
+Page        Component 
+[]  --> 
+{{}}  <---
+[()]   <--->
+()    ==>
+*     directvi 
+|     pipe 	
+
+
+
+
+Child Routes 
+-------------
+
+
+
+
+Directives > 
+
+What is directive ? 
+	directive a class 
+
+
+How is a directive applied 
+	directive can be applied in 3 wasy 
+
+	E  ,   A    ,   C 
+
+	<mycalander> 
+
+	<a  mycalendar> 
+
+	<a  class="mycalendar">
+
+
+
+
+Components 
+Services 
+Modules 
+  FormsModule 
+  RouterModule
+  HttpModule 
+Directives 
+	E,A,C
+Pipes
+	Transformations convertors 
+Routes 
+	ChildRoutes, Root Routes 
+RouterGuards 
+	it protect unwanted cache, bookmark of not accesible urls
+RouterOutlets
+Inbuild
+	*ngIf
+
+	*ngFor
+
+Notations 
+[]     page to component
+[()]   two way 
+{}     component to page 
+()     event 
+*      reserved directives 
+
+Scaffolding 
+    |--- angular.json 
+    |--- package.json 
+    |--- node_modules 
+    |---- src
+           |-- app 
+                |--app.module.ts 
+                       declaration 
+                       import 
+                       provide 
+@Pipe
+@Directive 
+@Component
+@Injectible 
+
+
+Subjects: PubSub 
+How to publish Subscribe with subject 
+ReplaySubject 
+BehaviourSubject 
+AsyncSubject 
+Subject 
+
+Http : 
+Observable 
+subscribe 
+
+Lambdas :- 
+classes 
+interfaces 
+functions 
+constructors 
+dependency injections 
+exports
+imports 
+const 
+
+Compnent has state and has behviour 
+Handle forms 
+
+cli ? 
+
+ng new 
+ng generate 
+       component 
+       directive 
+       services 
+       pipes 
+       guards 
+
+ng build 
+ng serve 
+ng test 
+ng i18n 
+ng e2e 
+
+---------------------------------------------------------------
+type script --> Tsc 
+.ts ---> .js  
+node and npm 
+npm install -g @angular/cli 
+npm install  bootstrap 
+
+---------------------------------------------------------------------------
+
+using boostrap and jquery promotes  respobse web design 
+
+-----------------------------------------------------------------------------
+
+How to deploy final build on the server 
+ng build --prod 
+
+dist/ copy dis appcontents to you wwwroot or any http server root folder 
+-====================
+Mocky is mock api to test your webservices 
+Testing using Karma and Jasmine 
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
