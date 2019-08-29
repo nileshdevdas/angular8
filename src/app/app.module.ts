@@ -33,6 +33,7 @@ const routes: Route[] = [
   {
     path: 'movies', component: MoviespageComponent,
     children: [
+      { path: '', component: BollywoodComponent },
       { path: 'bollywood', component: BollywoodComponent },
       { path: 'hollywood', component: HollywoodComponent },
       { path: 'regional', component: RegionalComponent },
