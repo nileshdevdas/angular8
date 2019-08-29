@@ -26,6 +26,7 @@ import { BollywoodComponent } from './bollywood/bollywood.component';
 import { RegionalComponent } from './regional/regional.component';
 import { DocumentaryComponent } from './documentary/documentary.component';
 import { AuthGuard } from './auth.guard';
+import { HighlightDirective } from './highlight.directive';
 /* routing rules */
 const routes: Route[] = [
   {
@@ -71,7 +72,8 @@ const routes: Route[] = [
     HollywoodComponent,
     BollywoodComponent,
     RegionalComponent,
-    DocumentaryComponent
+    DocumentaryComponent,
+    HighlightDirective
   ],
 
   imports: [
