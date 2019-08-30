@@ -610,6 +610,87 @@ Mocky is mock api to test your webservices
 Testing using Karma and Jasmine 
 ----------------------------------------------------------------------------
 
+A app needs to be created 
+
+1)  npm install -g  cordova 
+
+
+
+cordova create myApp org.apache.cordova.myApp myApp
+
+
+What is cordova : is hybrid apps platform 
+allow all your html5 or angular/react/vuejs/ any of these to get deployed 
+as android/iphone application 
+
+How does it do it : it does it by making use of the android webview 
+Iphone objective DisplayViews 
+
+
+
+It Renders you application like a web application hosted in your webserver 
+runnin inside your  android phone 
+
+
+First Create app 
+
+1. cordova create mymobapp com.siemens.mymobapp mymobapp
+
+2. cordova platform add android
+
+3. index.html in you angular app 
+	   <script type="text/javascript" src="cordova.js"></script>
+
+	    base href="./"
+
+4.   ng build --prod 
+
+5.   you got the files in the dist/myapp/xxxxx 
+
+6.  you copied all the files in you cordova app in www
+
+7.  you set 2 environment variables 
+	SET ANDROID_HOME=C:\tools\androidsdk
+
+	SET JAVA_HOME=C:\tools\androidstudio\jre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

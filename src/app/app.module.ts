@@ -28,7 +28,7 @@ import { DocumentaryComponent } from './documentary/documentary.component';
 import { AuthGuard } from './auth.guard';
 import { HighlightDirective } from './highlight.directive';
 /* routing rules */
-const routes: Route[] = [
+export const routes: Route[] = [
   {
     path: '', component: HomepageComponent
   },
